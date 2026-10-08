@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kese — Gizlilik Politikası</title>
+<style>
+  :root { --ink:#1f2a2c; --muted:#5d6b6e; --line:#e3ddd2; --bg:#faf7f1; --teal:#1f6f6b; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#ece7dd; --muted:#a9b3b4; --line:#33403f; --bg:#141b1b; --teal:#6cc3bc; }
+  }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { font-size:1.9rem; line-height:1.2; margin:0 0 8px; }
+  h2 { font-size:1.15rem; margin:32px 0 6px; padding-top:16px; border-top:1px solid var(--line); }
+  p { margin:8px 0; }
+  a { color:var(--teal); overflow-wrap:anywhere; }
+  code { font-size:.92em; }
+</style>
+</head>
+<body>
+<main>
+<h1>Kese — Gizlilik Politikası</h1>
+<p><strong>Yürürlük tarihi:</strong> 9 Ekim 2026</p>
+<p>Bu gizlilik politikası, Google Play'de yayınlanan Kese kişisel finans uygulamasının<br>
+(paket adı <code>com.ytcaydin.kese</code>) hangi verileri nasıl işlediğini açıklar.</p>
+<p><strong>Geliştirici:</strong> Aytaç Aydın<br>
+<strong>İletişim:</strong> [DESTEK E-POSTASI]</p>
+<h2>1. Kese'nin tuttuğu veriler</h2>
+<p>Kese; hesaplar, gelir/gider işlemleri, transferler, borçlar, tasarruf hedefleri, düzenli ödemeler, kategoriler ve uygulama ayarlarını <strong>cihazındaki yerel veritabanında</strong> saklar. Kese'nin kendi sunucusu yoktur; kullanıcı hesabı veya finansal profil oluşturulmaz ve finans kayıtların geliştiriciye gönderilmez.</p>
+<h2>2. Yedekler</h2>
+<p>Yedekleme yalnızca sen başlattığında yapılır. Yedek dosyaları AES-GCM ile şifrelenir; anahtar senin seçtiğin paroladan PBKDF2 ile türetilir. Yedek dosyasını nereye kaydedeceğine sen karar verirsin; Kese yedeği geliştirici sunucusuna yüklemez. Android'in otomatik bulut yedeklemesi finans verileri için kapalıdır.</p>
+<h2>3. Reklamlar</h2>
+<p>Ücretsiz sürümde Google Mobile Ads (AdMob) ile reklam gösterilir. Google, reklam sunumu ve ölçümü için kendi gizlilik politikası kapsamında reklam kimliği, cihaz bilgileri ve reklam etkileşimleri gibi verileri işleyebilir. Gerekli bölgelerde reklam izni Google'ın User Messaging Platform (UMP) onay ekranıyla alınır. Ayrıntılar: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a>. Kese'deki finans kayıtların reklam sağlayıcısına gönderilmez.</p>
+<h2>4. Kese Pro ve ödemeler</h2>
+<p>Kese Pro aboneliği Google Play Faturalandırma üzerinden satılır. Kart veya banka bilgilerin Kese'ye iletilmez; ödeme ve abonelik durumu Google Play tarafından yönetilir.</p>
+<h2>5. Canlı altın ve döviz kurları</h2>
+<p>Güncel gram altın fiyatı ve döviz kurlarını göstermek için Kese, genelpara.com'a HTTPS istekleri yapar. Bu isteklerde kişisel veya finansal veri gönderilmez; ancak her ağ isteğinde olduğu gibi IP adresin ve temel istemci bilgileri ilgili sunucu tarafından görülebilir. Enflasyon karşılaştırmaları uygulamaya gömülü verilerle yapılır.</p>
+<h2>6. Fiş tarama (kamera)</h2>
+<p>Fiş taramayı başlatırsan, çektiğin ya da galeriden seçtiğin fotoğraf Google ML Kit metin tanıma ile <strong>cihazında</strong> işlenir. Fotoğraf ve tanınan metin hiçbir sunucuya gönderilmez. Kamerayla çekilen fotoğraf yalnızca tarama için geçici önbellekte tutulur ve bir sonraki taramada silinir. Yalnızca senin onayladığın tutar ve tarih işlem olarak kaydedilir.</p>
+<h2>7. Sesli giriş</h2>
+<p>Sesli işlem girişini başlatırsan konuşman, cihazındaki Android konuşma tanıma servisi (genellikle Google uygulaması) tarafından metne çevrilir; bu işlem o servisin gizlilik koşullarına tabidir. Kese ses kaydetmez, yalnızca dönen metni işlem önerisine çevirir.</p>
+<h2>8. Güvenli Senkronizasyon (isteğe bağlı, Kese Pro)</h2>
+<p>Güvenli Senkronizasyon varsayılan olarak kapalıdır. Etkinleştirirsen finans verilerinin anlık görüntüsü, belirlediğin paroladan türetilen anahtarla cihazında AES-GCM ile şifrelenir ve <strong>yalnızca senin girdiğin HTTPS sunucusuna</strong> gönderilir. Bu sunucuyu geliştirici işletmez ve parolanı bilmez. Sunucu erişim anahtarı (token) cihazda Android Keystore ile şifreli saklanır.</p>
+<h2>9. Biyometrik kilit ve PIN</h2>
+<p>Kese, Android'in biyometrik doğrulama altyapısını kullanır; parmak izi veya yüz verini okuyamaz, saklamaz ve göndermez. Belirlediğin PIN cihazda yalnızca özet (hash) olarak saklanır.</p>
+<h2>10. Bildirimler</h2>
+<p>Hatırlatma bildirimlerini Profil ekranından açabilirsin; bildirimler cihazda oluşturulur, Kese bildirim sunucusu kullanmaz. Kese'nin bu sürümü <strong>diğer uygulamaların bildirimlerini okumaz</strong> ve "Bildirim erişimi" izni istemez.</p>
+<h2>11. Veri paylaşımı ve satışı</h2>
+<p>Kese finans verilerini satmaz, üçüncü taraflarla paylaşmaz ve kendi analitik ya da profil oluşturma sistemini çalıştırmaz. Üçüncü taraf hizmetler yalnızca yukarıda açıklanan amaçlarla (reklam, ödeme, kur verisi) kullanılır.</p>
+<h2>12. Verilerin silinmesi</h2>
+<p>Tüm finans kayıtlarını Profil &gt; Verileri sıfırla seçeneğiyle silebilirsin. Uygulamayı kaldırmak da cihazdaki Kese verilerini siler. Senin oluşturduğun yedek dosyaları ve Güvenli Senkronizasyon sunucundaki veriler senin kontrolündedir. Reklam verileri için Google'ın hesap ve reklam ayarlarını kullanabilirsin.</p>
+<h2>13. Çocuklar</h2>
+<p>Kese 13 yaşın altındaki çocuklara yönelik değildir ve bilerek çocuklardan veri toplamaz.</p>
+<h2>14. Değişiklikler</h2>
+<p>Bu politika güncellenirse yeni metin bu sayfada yayınlanır ve yürürlük tarihi değiştirilir.</p>
+<h2>15. İletişim</h2>
+<p>Gizlilikle ilgili soruların ve veri taleplerin için: [DESTEK E-POSTASI]</p>
+</main>
+</body>
+</html>
